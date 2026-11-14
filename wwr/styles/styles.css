@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #264653;
-    --secondary-color: #2a9d8f;
-    --accent1-color: #e76f51;
-    --accent2-color: #f4a261;
+    --primary-color: #5163ec;
+    --secondary-color: #003832;
+    --accent1-color: #3f6ff3;
+    --accent2-color: #050049;
     --heading-font: "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -25,10 +25,34 @@ footer {
     margin: 0 auto;
 }
 
-h1,
+header {
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+/* Usando --accent2-color */
+header nav a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.85;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Usando --accent1-color para los h2 */
 h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
+    color: var(--accent1-color);
 }
 
 nav,
@@ -54,27 +78,26 @@ article {
     height: auto;
 }
 
-h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.85;
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
 .hero article {
     position: absolute;
     bottom: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 16px;
     margin: 20px;
+    /* Usando --secondary-color como borde decorativo */
+    border-left: 5px solid var(--secondary-color);
 }
 
 .hero article img {
     float: right;
     width: 125px;
     margin-left: 10px;
+}
+
+/* Usando --secondary-color en el fondo del footer */
+footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
